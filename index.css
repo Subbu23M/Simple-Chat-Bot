@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: teal!important;
+}
+
+h3{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* For Chat-Icon */
+.chat-icon{
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+
+    /* z-index:stacks one on each other based on value  */
+    z-index: 1000;
+
+    cursor: pointer;
+}
+
+.chat-box{
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    width: 400px;
+    height: 80vh;
+    background-color: #DEDEDE;
+
+    /* z-index:stacks one on each other based on value  */
+    z-index: 1000;
+
+    border-radius: 1rem;
+
+    /* transition: Default Value Duration */
+    /* transition-timing-function:ease-out	Specifies a transition effect with a slow end */
+    transition: all 0.3s ease-out;
+
+    transform: scaleY(0);
+}
+
+.active{
+    transform: scaleY(1);
+}
+
+.hidden{
+    display: none;
+}
+
+.conv-form-wrapper textarea{
+    height: 30px;
+    overflow: hidden;
+    resize: none;
+}
+
+#messages{
+    padding: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width:375px){
+    .chat-box{
+        max-width:350px;
+        height: 80vh;
+        padding: 2rem;
+        margin-left: 4rem;
+    }
+
+    .conv-form-wrapper textarea{
+        height: 30px;
+        overflow: hidden;
+        resize: none;
+        padding-top: -3rem;
+    } 
+}

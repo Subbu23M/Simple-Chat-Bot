@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title ICON -->
+    <link rel="icon" href="./iconmonstr-speech-bubble-1.svg">
+
+    <title>Simple Chat Bot</title>
+
+    <!-- Font Awesome -->
+    <script src="./all.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- Bootstrap4 CSS -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+
+    <!-- Convform CSS -->
+    <link rel="stylesheet" href="./jquery.convform.css">
+
+</head>
+<body>
+
+    <h3 class="font-weight-bold text-center text-capitalize">
+        Simple chat Bot
+    </h3>
+
+    <!-- Chat-icon -->
+    <div class="chat-icon">
+
+        <i class="fa fa-comments fa-3x text-warning"></i>
+
+    </div>
+    <!-- End of Chat-icon -->
+
+    <!-- Chat-box -->
+    <div class="chat-box">
+
+        <div class="conv-form-wrapper">
+
+            <form action="" method="GET" class="hidden">
+
+                <select name="category" data-conv-question="Hello,how can i help you?">
+
+                    <option value="development"> Web Development</option>
+                    <option value="design">Web Design</option>              
+                        <!-- name = value -->
+
+                </select>
+
+                <div data-conv-fork="category">
+
+                    <div data-conv-case="development">
+                        <input type="text" name="company name" data-conv-question="Please Tell Me Your Company Name">
+                    </div>
+
+                    <div data-conv-case="design">
+                        <input type="text" name="tool name" data-conv-question="Please Tell Me Which Tool You Prefer">
+                    </div>
+
+                </div>
+
+                <input type="text" name="your name" data-conv-question="Your Name Please">
+
+                <input data-conv-question="Type in your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="What's your e-mail?">
+                
+                <select name="category" data-conv-question="Confirm?">
+
+                    <option value="confirm"> Confirm? </option>
+                    
+                </select>
+                
+            </form>
+                
+        </div>    
+
+    </div>
+    <!-- End of Chat-box -->
+
+    <!-- jQuery -->
+    <script src="./jquery-3.5.1.min.js"></script>
+
+    <!-- convform jQuery -->
+    <script src="./jquery.convform.js"></script>
+
+    <!-- External JS -->
+    <script src="./main.js"></script>
+    
+</body>
+</html>
